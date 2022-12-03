@@ -17,7 +17,7 @@ public class FileReader {
             File file = new File(Objects.requireNonNull(resource).getFile());
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
-                array.add(sc.nextLine());
+                array.add(sc.nextLine().trim());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -9,22 +9,22 @@ public class Day2 {
     static List<String> matches = FileReader.fileStringReader(STRATEGY_GUIDE);
 
     public static void main(String[] args) {
+        // Part 1 Points
         int totalPoints1 = 0;
         for (String m : matches
         ) {
             totalPoints1 += playedHandPointCalculator1(m.substring(m.length() - 1));
             totalPoints1 += outcomeCalculatorPart1(m);
         }
-        // Part 1 Points
         System.out.println(totalPoints1);
 
+        // Part 2 Points
         int totalPoints2 = 0;
         for (String m : matches
         ) {
             totalPoints2 += outcomeCalculatorPart2(m);
             totalPoints2 += playedHandPointCalculator2(m);
         }
-        // Part 2 Points
         System.out.println(totalPoints2);
     }
 
